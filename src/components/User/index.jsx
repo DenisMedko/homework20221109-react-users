@@ -1,12 +1,17 @@
-import { Component } from 'react';
+import { PureComponent } from 'react';
 import UserInfo from '../UserInfo';
 import LikesSection from '../LikesSection';
 import DeleteBtn from '../DeleteBtn';
 
-class User extends Component {
+class User extends PureComponent {
+    // при удалении юзера из списка все элементы ререндерились
+    // решение - PureComponent вместо Component
     componentDidUpdate() {
         console.log('componentDidUpdate User id = '+this.props.user.id);
     }
+    //shouldComponentUpdate(nextProps, nextState) {
+        //return false;
+    //}
     render() {
         const {
             user : {
@@ -17,7 +22,7 @@ class User extends Component {
             deleteHandle = () => {}
         } = this.props;
         
-        
+        console.log('render User id = '+this.props.user.id);
         return (
             <div>
                 <UserInfo firstName={firstName} lastName={lastName} />
