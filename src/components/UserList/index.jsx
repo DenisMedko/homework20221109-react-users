@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import User from '../User';
-import {users} from '../../data/users.js';
+import {usersArray} from '../../data/usersData.js';
 
 class UserList extends Component {
     state = {
-        users : users, 
+        users : usersArray, 
     };
     likeHandle = (id) => {
         const newUsers = this.state.users.map(user => {

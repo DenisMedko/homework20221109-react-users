@@ -1,4 +1,8 @@
 import React from 'react';
+import UserInfo from '../UserInfo';
+import LikesDisplay from '../LikesDisplay';
+import LikesBtn from '../LikesBtn';
+import DeleteBtn from '../DeleteBtn';
 
 const User = (props) => {
     const {
@@ -14,9 +18,10 @@ const User = (props) => {
     } = props;
     return (
         <div>
-            {firstName} {lastName} likes : {likes}
-            <button disabled={myLike} onClick={()=>likeHandle(id)}>Like</button>
-            <button onClick={()=>deleteHandle(id)}>Delete</button>     
+            <UserInfo firstName={firstName} lastName={lastName}/>
+            <LikesDisplay likes={likes}/>
+            <LikesBtn myLike={myLike} id={id} likeHandle={likeHandle}/> 
+            <DeleteBtn id={id} deleteHandle={deleteHandle}/>    
         </div>
     );
 }
