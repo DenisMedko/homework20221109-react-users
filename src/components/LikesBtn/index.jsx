@@ -1,9 +1,9 @@
 import React from 'react';
 
 const LikesBtn = (props) => {
-    const {myLike, id, likeHandle} = props;
+    const {myLike, userId, likeHandle} = props;
     return (
-        <button disabled={myLike} onClick={()=>likeHandle(id)}>Like</button>
+        <button disabled={myLike} onClick={()=>likeHandle(userId)}>Like</button>
     );
 }
 

@@ -1,9 +1,9 @@
 import React from 'react';
 
 const DeleteBtn = (props) => {
-    const {id, deleteHandle} = props;
+    const {userId, deleteHandle} = props;
     return (
-        <button onClick={()=>deleteHandle(id)}>Delete</button> 
+        <button onClick={()=>deleteHandle(userId)}>Delete</button> 
     );
 }
 
