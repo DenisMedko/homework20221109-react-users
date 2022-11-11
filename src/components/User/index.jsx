@@ -18,10 +18,10 @@ const User = (props) => {
     } = props;
     return (
         <div>
-            <UserInfo firstName={firstName} lastName={lastName}/>
-            <LikesDisplay likes={likes}/>
-            <LikesBtn myLike={myLike} id={id} likeHandle={likeHandle}/> 
-            <DeleteBtn id={id} deleteHandle={deleteHandle}/>    
+            <UserInfo firstName={firstName} lastName={lastName} />
+            <LikesDisplay likes={likes} />
+            <LikesBtn myLike={myLike} id={id} likeHandle={likeHandle} /> 
+            <DeleteBtn id={id} deleteHandle={deleteHandle} />    
         </div>
     );
 }

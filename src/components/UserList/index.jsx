@@ -9,8 +9,8 @@ class UserList extends Component {
     likeHandle = (id) => {
         const newUsers = this.state.users.map(user => {
             return {...user, 
-                likes: id === user.id ? ++user.likes : user.likes, 
-                myLike : id === user.id ? user.myLike = true : user.myLike
+                likes: id === user.id ? user.likes + 1 : user.likes, 
+                myLike : id === user.id ? true : user.myLike
             }
         });
         this.setState({...this.state, users : newUsers});
