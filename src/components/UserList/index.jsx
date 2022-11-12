@@ -6,7 +6,9 @@ class UserList extends Component {
     state = {
         users : usersArray, 
     };
-    
+    componentDidMount() {
+        console.log('componentDidMount UserList');
+    }
     deleteHandle = (id) => {
         const newUsers = this.state.users.filter(user => user.id !== id);
         this.setState({...this.state, users : newUsers});

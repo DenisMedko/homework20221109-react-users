@@ -6,8 +6,14 @@ import DeleteBtn from '../DeleteBtn';
 class User extends PureComponent {
     // при удалении юзера из списка все элементы ререндерились
     // решение - PureComponent вместо Component
+    componentDidMount() {
+        console.log('componentDidMount User id = '+this.props.user.id);
+    }
     componentDidUpdate() {
         console.log('componentDidUpdate User id = '+this.props.user.id);
+    }
+    componentWillUnmount() {
+        console.log('componentWillUnmount User id = '+this.props.userId); 
     }
     //shouldComponentUpdate(nextProps, nextState) {
         //return false;

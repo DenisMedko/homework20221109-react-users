@@ -16,7 +16,6 @@ class LikesSection extends Component {
     }
     componentWillUnmount() {
         console.log('componentWillUnmount LikesSection id = '+this.props.userId); 
-        this.setState({});
     }
     likeHandle = () => {
         this.setState({
